@@ -1,23 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { createContext, useContext } from "react";
+import UseStateHook from "./Hooks/UseStateHook";
+import UseEffectHooks from "./Hooks/UseEffectHooks";
+// import UseContextHook from "./Hooks/UseContextHook";
+import "./App.css";
+import UseReducerHook from "./Hooks/UseReducerHook";
+import UseRefHook from "./Hooks/UseRefHook";
+import IncrDect from "./component/IncrDect";
+import IncrementDect from './component/IncrementDect';
+import IncrementA from "./Hooks/example/IncrementA";
+import IncrementB from "./Hooks/example/IncrementB";
+import UseReducerExam from "./Hooks/example/UseReducerExam";
+import FetchData from "./Hooks/example/FetchData";
+import Bcomponent from "./component/Bcomponent";
+import UseMemoHook from './Hooks/UseMemoHook';
+import UseMomoHooksExam from './component/useMemoHooksExam'
+import UseMemoHooks from './Hooks/UseMemoHooks'
+export const context = createContext();
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <context.Provider value={{ name: "Kruti", Class: "Javascript" }}>
+        {/* <UseStateHook /> */}
+        {/* <UseEffectHooks /> */}
+        {/* <UseReducerHook />
+      <UseContextHook/>
+      <UseRefHook/> */}
+        {/* <IncrDect/> */}
+        {/* <IncrementA/>
+      <IncrementB/> */}
+        {/* <UseReducerExam/> */}
+        {/* <FetchData /> */}
+        {/* <IncrDect/>
+        <IncrementDect/> */}
+        {/* <UseReducerHook/> */}
+        {/* <Bcomponent/> */}
+        {/* <UseContextHook/> */}
+      </context.Provider>
+      {/* <UseMemoHook/> */}
+      {/* <UseMomoHooksExam/> */}
+ <UseMemoHooks/>
     </div>
   );
 }
